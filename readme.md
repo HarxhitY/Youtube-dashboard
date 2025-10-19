@@ -40,5 +40,6 @@ A **mini-dashboard** built with the MERN stack to manage YouTube videos. Users c
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/youtube-companion-dashboard.git
-cd youtube-companion-dashboard
+git clone origin https://github.com/HarxhitY/Youtube-dashboard.git
+cd youtube-dashboard
+
