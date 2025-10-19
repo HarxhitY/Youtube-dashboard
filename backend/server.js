@@ -126,6 +126,11 @@ app.use('/api/events', eventRoutes);
 
 // Serve frontend
 const frontendPath = path.join(__dirname, '../frontend/dist');
+
+console.log("Frontend path:", frontendPath);
+console.log("Files inside dist:", fs.existsSync(frontendPath) ? fs.readdirSync(frontendPath) : "dist folder not found");
+
+
 app.use(express.static(frontendPath));
 
 // ✅ FIX for Express 5 — use a regex instead of "*"
