@@ -99,6 +99,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const fs = require('fs');
 
 const authRoutes = require('./routes/auth');
 const videoRoutes = require('./routes/videos');
