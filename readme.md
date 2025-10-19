@@ -2,6 +2,10 @@
 
 A **mini-dashboard** built with the MERN stack to manage YouTube videos. Users can view video details, comment, reply, update video info, and maintain personal notes.
 
+
+---
+## Live Link
+- https://youtube-dashboard-1-u3di.onrender.com/
 ---
 
 ## Features
@@ -42,4 +46,5 @@ A **mini-dashboard** built with the MERN stack to manage YouTube videos. Users c
 ```bash
 git clone origin https://github.com/HarxhitY/Youtube-dashboard.git
 cd youtube-dashboard
+
 
