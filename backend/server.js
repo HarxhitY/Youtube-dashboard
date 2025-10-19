@@ -1,10 +1,8 @@
-// server.js
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const path = require('path');
 
 // Import routes
 const authRoutes = require('./routes/auth');
@@ -30,20 +28,12 @@ app.use('/api/comments', commentRoutes);
 app.use('/api/notes', noteRoutes);
 app.use('/api/events', eventRoutes);
 
-// Serve frontend in production
-if (process.env.NODE_ENV === 'production') {
-  const frontendPath = path.join(__dirname, '../frontend/dist');
-  app.use(express.static(frontendPath));
-
-  // Catch-all for React routing
-  app.get('/*', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
-  });
-}
-
 // Connect to MongoDB
 const PORT = process.env.PORT || 4000;
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, { 
+  useNewUrlParser: true, 
+  useUnifiedTopology: true 
+})
 .then(() => {
   console.log('Mongo connected');
   app.listen(PORT, () => console.log('Server listening on', PORT));
